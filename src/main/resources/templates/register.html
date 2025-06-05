@@ -13,8 +13,9 @@
             <div th:if="${successMessage}" class="success-message" th:text="${successMessage}"></div>
             <div th:if="${failureMessage}" class="error-message" th:text="${failureMessage}"></div>
             <h1>Create Account</h1>
-            <p>Join us today! Fill in your details to get started</p>
-            <form action="/do-register" method="post">
+            <p>Join us today! Fill in your details to get started</p>            
+            <form action="/do-register" method="post" th:action="@{/do-register}">
+                <!-- CSRF token will be automatically added by Thymeleaf -->
                 <div class="form-group">
                     <label for="fullname">
                         <span class="input-label">Full Name</span>
